@@ -1,6 +1,6 @@
 # Daniel Reyes Hualacan | Portafolio
 
-Portafolio web desarrollado con **React**, **Vite**, **TypeScript** y **Tailwind CSS**. El sitio reúne una tesis, archivo fotográfico, fotolibros y material visual relacionado con investigación etnográfica, paisaje y territorio.
+Portafolio web desarrollado con **React**, **Vite**, **TypeScript** y **Tailwind CSS**. El sitio reúne una tesis, archivo fotográfico, fotolibros enlazados externamente y material visual relacionado con investigación etnográfica, paisaje y territorio.
 
 ## Tecnologías
 
@@ -37,15 +37,12 @@ npm run build
 src/
 ├── App.tsx
 ├── data.ts
-├── photobook_data.ts
 ├── types.ts
 ├── index.css
 └── components/
     ├── Header.tsx
     ├── Footer.tsx
     ├── Lightbox.tsx
-    ├── ThesisModal.tsx
-    ├── PhotobookModal.tsx
     └── CasaCabraPanel.tsx
 ```
 
@@ -62,4 +59,4 @@ git push -u origin main
 
 ## Notas
 
-Este proyecto no requiere claves API para ejecutarse. No subas archivos `.env` con credenciales reales al repositorio.
+Este proyecto no requiere claves API para ejecutarse. La tesis y el fotolibro se abren mediante enlaces externos a Dropbox; no hay previsualizadores emergentes para esos documentos. No subas archivos `.env` con credenciales reales al repositorio.

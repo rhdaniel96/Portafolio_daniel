@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Camera, BookOpen, LayoutTemplate, ArrowRight, Scroll } from "lucide-react";
+import { BookOpen, LayoutTemplate } from "lucide-react";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Lightbox from "./components/Lightbox";
-import ThesisModal from "./components/ThesisModal";
-import PhotobookModal from "./components/PhotobookModal";
 import CasaCabraPanel from "./components/CasaCabraPanel";
 
 import { ARCHIVE_IMAGES, PHOTOBOOKS_DATA } from "./data";
-import { ArchiveImage, Photobook } from "./types";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>("index");
   
-  // Interactive Modals and Lightbox States
+  // Interactive Lightbox State
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
-  const [selectedBook, setSelectedBook] = useState<Photobook | null>(null);
-  const [isThesisOpen, setIsThesisOpen] = useState<boolean>(false);
 
   // Smooth scroll helper for internal index section navigation
   const scrollToAnchor = (id: string) => {
@@ -113,14 +108,15 @@ export default function App() {
                   </p>
 
                   <div className="flex items-center gap-4 mt-2">
-                    <button
-                      type="button"
-                      onClick={() => setIsThesisOpen(true)}
-                      className="w-fit bg-archival-olive hover:bg-archival-olive-light text-archival-bg font-mono text-xs uppercase tracking-widest py-3 px-8 rounded-sm transition-all active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md flex items-center gap-2 font-bold"
+                    <a
+                      href="https://www.dropbox.com/scl/fi/6h6n734ydnjeq42p6ou3t/TESIS-PREGRADO-Reyes-Daniel.pdf?rlkey=wrdvk72ic6nwfd0vb250350m1&st=s7i4xaxw&dl=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-fit bg-archival-olive hover:bg-archival-olive-light text-archival-bg font-mono text-xs uppercase tracking-widest py-3 px-8 rounded-sm transition-all active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md inline-flex items-center gap-2 font-bold"
                     >
                       <BookOpen className="w-4 h-4" />
                       Leer Tesis
-                    </button>
+                    </a>
                   </div>
                 </div>
               </section>
@@ -189,11 +185,12 @@ export default function App() {
 
                 <div className="flex justify-center">
                   {PHOTOBOOKS_DATA.map((book) => (
-                    <button
+                    <a
                       key={book.id}
-                      type="button"
-                      onClick={() => setSelectedBook(book)}
-                      className="bg-[#f2eee1]/60 border border-archival-border p-5 md:p-6 rounded-sm flex flex-col md:flex-row gap-6 max-w-3xl w-full group cursor-pointer hover:border-archival-dark hover:shadow-md transition-all duration-350 text-left"
+                      href="https://www.dropbox.com/scl/fi/uai2luzjbi01m7bihlxs6/Casa-Cabra-2.pdf?rlkey=41qiktxa5qwyqv4n6yp6bslxj&st=iuhkh6qp&dl=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#f2eee1]/60 border border-archival-border p-5 md:p-6 rounded-sm flex flex-col md:flex-row gap-6 max-w-3xl w-full group cursor-pointer hover:border-archival-dark hover:shadow-md transition-all duration-350 block text-left"
                       id="cabra-monograph-card"
                     >
                       <div className="bg-archival-bg border border-archival-border p-4 overflow-hidden rounded-[1.5px] flex items-center justify-center md:w-[220px] aspect-square shrink-0 group-hover:bg-[#ebdbb2]/10 transition-colors">
@@ -220,7 +217,7 @@ export default function App() {
                           <span>→</span>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   ))}
                 </div>
               </section>
@@ -281,17 +278,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Integrated PDF Reader Modal for the Thesis paper */}
-      <ThesisModal 
-        isOpen={isThesisOpen}
-        onClose={() => setIsThesisOpen(false)}
-      />
-
-      {/* Integrated Spread-Flipping catalog inspection modal */}
-      <PhotobookModal 
-        book={selectedBook}
-        onClose={() => setSelectedBook(null)}
-      />
 
     </div>
   );

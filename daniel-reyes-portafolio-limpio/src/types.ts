@@ -21,21 +21,3 @@ export interface Photobook {
   pagesCount: number;
   dimensions: string;
 }
-
-export interface Thesis {
-  title: string;
-  subtitle: string;
-  abstract: string;
-  documentBody: {
-    sectionTitle: string;
-    paragraphs: string[];
-  }[];
-}
-
-export interface ThesisPage {
-  pageNumber: number;
-  section: string;
-  header: string;
-  paragraphs: string[];
-}
-
