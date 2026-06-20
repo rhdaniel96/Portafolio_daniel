@@ -71,7 +71,7 @@ export default function App() {
                   Daniel Reyes Hualacan
                 </h1>
                 <p className="font-mono text-xs uppercase tracking-widest text-archival-text-muted mt-2 block border-t border-b border-archival-border/40 py-2 px-6">
-                  Tesis • Fotografía Analógica • Ediciones
+                  Tesis • Fotografía • Ediciones 
                 </p>
                 
                 <a
