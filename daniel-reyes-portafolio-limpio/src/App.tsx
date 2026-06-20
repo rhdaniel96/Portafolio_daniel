@@ -178,7 +178,7 @@ export default function App() {
               <section id="photobooks-section" className="scroll-mt-24 pb-6">
                 <div className="flex items-center justify-between mb-8 border-b border-archival-border pb-2.5">
                   <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-archival-olive font-bold flex items-center gap-1">
-                    <span>03.</span> Photobooks y Autoediciones
+                    <span>03.</span> Photobooks
                   </h2>
                   <span className="font-mono text-[10px] text-archival-text-muted">Haz clic en portada para hojear</span>
                 </div>
@@ -187,7 +187,7 @@ export default function App() {
                   {PHOTOBOOKS_DATA.map((book) => (
                     <a
                       key={book.id}
-                      href="https://www.dropbox.com/scl/fi/uai2luzjbi01m7bihlxs6/Casa-Cabra-2.pdf?rlkey=41qiktxa5qwyqv4n6yp6bslxj&st=iuhkh6qp&dl=0"
+                      href="https://www.dropbox.com/scl/fi/rl96bv17pdrjgv4uz0kgb/Casa_Cabra.pdf?rlkey=wwrrsyn93yyhsul998a8gau45&st=6miho3fv&dl=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#f2eee1]/60 border border-archival-border p-5 md:p-6 rounded-sm flex flex-col md:flex-row gap-6 max-w-3xl w-full group cursor-pointer hover:border-archival-dark hover:shadow-md transition-all duration-350 block text-left"
