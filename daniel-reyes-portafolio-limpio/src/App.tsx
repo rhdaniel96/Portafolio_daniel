@@ -109,7 +109,8 @@ export default function App() {
 
                   <div className="flex items-center gap-4 mt-2">
                     <a
-                      href="https://www.dropbox.com/scl/fi/6h6n734ydnjeq42p6ou3t/TESIS-PREGRADO-Reyes-Daniel.pdf?rlkey=wrdvk72ic6nwfd0vb250350m1&st=s7i4xaxw&dl=0"
+                      
+                      href="/images/otros/tesis-daniel-reyes.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-fit bg-archival-olive hover:bg-archival-olive-light text-archival-bg font-mono text-xs uppercase tracking-widest py-3 px-8 rounded-sm transition-all active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md inline-flex items-center gap-2 font-bold"
