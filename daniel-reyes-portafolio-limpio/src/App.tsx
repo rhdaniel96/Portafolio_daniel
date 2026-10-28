@@ -187,12 +187,12 @@ export default function App() {
                   {PHOTOBOOKS_DATA.map((book) => (
                     <a
                       key={book.id}
-                      href="https://www.dropbox.com/scl/fi/rl96bv17pdrjgv4uz0kgb/Casa_Cabra.pdf?rlkey=wwrrsyn93yyhsul998a8gau45&st=6miho3fv&dl=0"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#f2eee1]/60 border border-archival-border p-5 md:p-6 rounded-sm flex flex-col md:flex-row gap-6 max-w-3xl w-full group cursor-pointer hover:border-archival-dark hover:shadow-md transition-all duration-350 block text-left"
-                      id="cabra-monograph-card"
-                    >
+                        href="/images/fotolibros/Casa_Cabra.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#f2eee1]/60 border border-archival-border p-5 md:p-6 rounded-sm flex flex-col md:flex-row gap-6 max-w-3xl w-full group cursor-pointer hover:border-archival-dark hover:shadow-md transition-all duration-350 block text-left"
+                        id="cabra-monograph-card"
+                      >
                       <div className="bg-archival-bg border border-archival-border p-4 overflow-hidden rounded-[1.5px] flex items-center justify-center md:w-[220px] aspect-square shrink-0 group-hover:bg-[#ebdbb2]/10 transition-colors">
                         <img 
                           src={book.coverSrc} 
