@@ -109,8 +109,7 @@ export default function App() {
 
                   <div className="flex items-center gap-4 mt-2">
                     <a
-                      
-                      href="/images/otros/tesis-daniel-reyes.pdf"
+                      href="/images/otros/TESIS%20FINAL-corregida%20Reyes%2C%20Daniel.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-fit bg-archival-olive hover:bg-archival-olive-light text-archival-bg font-mono text-xs uppercase tracking-widest py-3 px-8 rounded-sm transition-all active:scale-[0.98] cursor-pointer shadow-sm hover:shadow-md inline-flex items-center gap-2 font-bold"
